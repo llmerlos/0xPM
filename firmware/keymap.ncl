@@ -85,20 +85,20 @@ let keymap = {
       kc.TAB,   kc.Q,     kc.W,     kc.E,     kc.R,     kc.T,           kc.Y,     kc.U,     kc.I,     kc.O,     kc.P,     kc.ENT,     
       md.lsft,  kc.A,     kc.S,     kc.D,     kc.F,     kc.G,           kc.H,     kc.J,     kc.K,     kc.L,     kc.SCLN,  kc.QUOT,     
       md.lctl,  kc.Z,     kc.X,     kc.C,     kc.V,     kc.B,           kc.N,     kc.M,     kc.COMM,  kc.DOT,   kc.SLSH,  md.lalt,     
-                          md.ralt,  md.lgui,  kc.SPC,   MO _RISE,       MO _LOWR, kc.BSPC,  md.rsft,  kc.DEL,                     
+                          kc.DEL,   md.lgui,  kc.SPC,   MO _RISE,       MO _LOWR, kc.BSPC,  md.rsft,  md.ralt,                     
     ],
     # GAME    
     [
       kc.TAB,   kc.Q,     kc.W,     kc.E,     kc.R,     kc.T,           kc.Y,     kc.U,     kc.I,     kc.O,     kc.P,     kc.ENT,     
       md.lsft,  kc.A,     kc.S,     kc.D,     kc.F,     kc.G,           kc.H,     kc.J,     kc.K,     kc.L,     kc.SCLN,  kc.QUOT,     
       md.lctl,  kc.Z,     kc.X,     kc.C,     kc.V,     kc.B,           kc.N,     kc.M,     kc.COMM,  kc.DOT,   kc.SLSH,  md.lgui,     
-                          XXXXXXXX, md.lalt,  kc.SPC,   MO _GNUM,       MO _LOWR, kc.BSPC,  md.rsft,  kc.DEL,                     
+                          kc.DEL,   md.lalt,  kc.SPC,   MO _GNUM,       MO _LOWR, kc.BSPC,  md.rsft,  md.ralt,                     
     ],
     # GNUM
     [
       kc.ESC,   kc.N1,    TTTTTTTT, kc.N2,    kc.N3,    kc.N4,          cu.VD_U,  TTTTTTTT, kc.UP,    TTTTTTTT, cu.VD_R,  cu.AF4, 
       TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT,       cu.VD_L,  kc.LEFT,  kc.DOWN,  kc.RIGHT, TTTTTTTT, TTTTTTTT, 
-      TTTTTTTT, MO _FUNC, kc.N5,    kc.N6,    TTTTTTTT, TTTTTTTT,       TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, 
+      TTTTTTTT, TTTTTTTT, kc.N5,    kc.N6,    TTTTTTTT, TTTTTTTT,       TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT, 
                           TTTTTTTT, TTTTTTTT, TTTTTTTT, MO _GNUM,       TTTTTTTT, TTTTTTTT, TTTTTTTT, TTTTTTTT,                     
     ],
     # LOWR
@@ -117,17 +117,17 @@ let keymap = {
     ],
     # FUNC
     [
-      TTTTTTTT, fk.BOOT,  kc.F7,    kc.F8,    kc.F9,    kc.F12,         kc.F12,   kc.F7,    kc.F8,    kc.F9,    fk.BOOT,  TTTTTTTT, 
-      TTTTTTTT, fk.RESET, kc.F4,    kc.F5,    kc.F6,    kc.F11,         kc.F11,   kc.F4,    kc.F5,    kc.F6,    fk.RESET, TTTTTTTT, 
-      TTTTTTTT, XXXXXXXX, kc.F1,    kc.F2,    kc.F3,    kc.F10,         kc.F10,   kc.F1,    kc.F2,    kc.F3,    XXXXXXXX, TTTTTTTT, 
+      TTTTTTTT, fk.BOOT,  ms.lsft,  ms.lalt,  ms.ralt,  ms.rsft,        kc.F12,   kc.F7,    kc.F8,    kc.F9,    fk.BOOT,  TTTTTTTT, 
+      TTTTTTTT, fk.RESET, ms.lctl,  ms.lgui,  ms.rgui,  ms.rctl,        kc.F11,   kc.F4,    kc.F5,    kc.F6,    fk.RESET, TTTTTTTT, 
+      TTTTTTTT, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX,       kc.F10,   kc.F1,    kc.F2,    kc.F3,    XXXXXXXX, TTTTTTTT, 
                           TTTTTTTT, TTTTTTTT, TTTTTTTT, MO _RISE,       MO _LOWR, TTTTTTTT, TTTTTTTT, TTTTTTTT,                     
     ],
     # AJST
     [
       TTTTTTTT, cu.E_IEX, cu.E_ACF, cu.E_LL,  cu.D_SHS, me.VOLU,        me.PREV,  kc.INS,   kc.PSCR,  kc.SCRL,  kc.PAUS,  TTTTTTTT, 
-      TTTTTTTT, kc.CAPS,  cu.E_OM,  cu.E_OF,  cu.D_MUT, me.VOLD,        me.PLAY,  TO _BASE, TO _GAME, ms.ralt,  kc.APP,   md.rsft, 
-      md.ralt,  kc.NUBS,  cu.E_ATI, cu.E_DEG, cu.D_SIL, me.MUTE,        me.NEXT,  cu.KVM1,  cu.KVM2,  XXXXXXXX, cu.E_IQM, md.rctl, 
-                          md.lalt,  md.lsft,  TTTTTTTT, MO _RISE,       MO _LOWR, TTTTTTTT, md.rgui,  TTTTTTTT,                     
+      TTTTTTTT, kc.CAPS,  cu.E_OM,  cu.E_OF,  cu.D_MUT, me.VOLD,        me.PLAY,  TO _BASE, TO _GAME, XXXXXXXX, kc.APP,   TTTTTTTT, 
+      TTTTTTTT, kc.NUBS,  cu.E_ATI, cu.E_DEG, cu.D_SIL, me.MUTE,        me.NEXT,  cu.KVM1,  cu.KVM2,  XXXXXXXX, cu.E_IQM, TTTTTTTT, 
+                          TTTTTTTT, TTTTTTTT, TTTTTTTT, MO _RISE,       MO _LOWR, TTTTTTTT, TTTTTTTT, TTTTTTTT,                     
     ],
   ]
 } in
